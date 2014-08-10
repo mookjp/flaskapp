@@ -20,6 +20,6 @@ WORKDIR /app
 RUN git clone https://github.com/mookjp/flaskapp
 WORKDIR /app/flaskapp
 
-EXPOSE 5000
+EXPOSE 80
 
 ENTRYPOINT ["/usr/bin/python", "app.py"]
