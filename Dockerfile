@@ -15,11 +15,8 @@ RUN apt-get install -y curl
 
 RUN pip install Flask
 
-RUN mkdir /app
-WORKDIR /app
-RUN git clone https://github.com/mookjp/flaskapp
-WORKDIR /app/flaskapp
+ADD . /app/flaskapp
 
 EXPOSE 80
 
-ENTRYPOINT ["/usr/bin/python", "app.py"]
+ENTRYPOINT ["/usr/bin/python", "/app/flaskapp/app.py"]
