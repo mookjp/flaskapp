@@ -1,7 +1,9 @@
 from flask import Flask
+import time
 app = Flask(__name__)
 
 @app.route('/')
+@app.route('/path/to/something/')
 def hello_world():
     return '<h1>Hello World!</h1> \
             <p>This is a sample wep application!</p>\
