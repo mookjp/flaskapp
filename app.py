@@ -1,5 +1,7 @@
 from flask import Flask
+import time
 app = Flask(__name__)
+time.sleep(5)
 
 @app.route('/')
 def hello_world():
